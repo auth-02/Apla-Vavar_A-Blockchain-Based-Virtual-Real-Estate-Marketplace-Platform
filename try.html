@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real Estate Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div id="map" style="width: 100%; height: 500px;"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Your JavaScript code will go here
+
+    var properties = [
+  {
+    id: 1,
+    title: "Vishwakarma Institute of Technology",
+    address: " 666, Upper Indiranagar, Bibwewadi, Pune, Maharashtra, INDIA - 411 037",
+    price: 500000,
+    lat: 18.4636,
+    lng: 73.8682
+  },
+  // Add more properties as needed
+];
+
+var map = L.map('map').setView([37.7749, -122.4194], 10);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Create map markers for each property
+properties.forEach(function(property) {
+  var marker = L.marker([property.lat, property.lng]).addTo(map);
+  marker.bindPopup('<h2>' + property.title + '</h2>' +
+                  '<p><strong>Address:</strong> ' + property.address + '</p>' +
+                  '<p><strong>Price:</strong> $' + property.price + '</p>' +
+                  '<button onclick="buyProperty(' + property.id + ')">Buy Property</button>');
+});
+
+// Function to handle property buying
+function buyProperty(propertyId) {
+  // Implement logic to handle property buying, e.g., redirect to a purchase page
+  console.log('Buying property with ID: ' + propertyId);
+}
+
+
+  </script>
+</body>
+</html>
+
