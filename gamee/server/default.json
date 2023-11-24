@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "PARTY ROOM",
-    "password": "WAWA",
+    "password": "APLA VAVAR",
     "items": [
       {
         "name": "loungeSofaCorner",
@@ -106,7 +106,7 @@
   {
     "id": 2,
     "name": "BATHROOM",
-    "password": "WAWA",
+    "password": "APLA VAVAR",
     "items": [
       {
         "name": "washer",
@@ -213,7 +213,7 @@
   {
     "id": 3,
     "name": "KITCHEN",
-    "password": "WAWA",
+    "password": "APLA VAVAR",
     "items": [
       {
         "name": "plant",
@@ -347,7 +347,7 @@
   {
     "id": 4,
     "name": "COSY ROOM",
-    "password": "WAWA",
+    "password": "APLA VAVAR",
     "items": [
       {
         "name": "tableCoffee",
